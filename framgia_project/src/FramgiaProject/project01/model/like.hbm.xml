@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">  
+  
+ <hibernate-mapping>  
+  <class name="FramgiaProject.project01.model.Like" table="Like">  
+    <id name="id">  
+     <generator class="assigned"></generator>  
+    </id> 
+ 
+    <many-to-one name="user_id" class="FramgiaProject.project01.model.User" column="user_id"
+     not-null="true" />
+    <many-to-one name="review_id" class="FramgiaProject.project01.model.Review" column="review_id"
+     not-null="true" />    
+  </class>  
+            
+ </hibernate-mapping>  

@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">  
+  
+ <hibernate-mapping>  
+  <class name="FramgiaProject.project01.model.Activity" table="Activity">  
+    <id name="id">  
+     <generator class="assigned"></generator>  
+    </id>  
+            
+    <property name="target_id" type="integer"></property>
+    <property name="target_name"></property>
+    <property name="action_name"></property>
+    <many-to-one name="user_id" class="FramgiaProject.project01.model.User" column="user_id"
+     not-null="true" />
+  </class>  
+            
+ </hibernate-mapping>  

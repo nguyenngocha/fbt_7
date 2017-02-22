@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">  
+  
+ <hibernate-mapping>  
+  <class name="FramgiaProject.project01.model.BookingRequest" table="BookingRequest">  
+    <id name="id">  
+     <generator class="assigned"></generator>  
+    </id>  
+            
+    <property name="booking_number"></property>
+    <property name="start_date" type="date"></property>
+    <property name="finish_date" type="date"></property>
+    <many-to-one name="tour_id" class="FramgiaProject.project01.model.Tour" column="tour_id"
+     not-null="true" />
+    <many-to-one name="user_id" class="FramgiaProject.project01.model.User" column="user_id"
+     not-null="true" />
+  </class>  
+            
+ </hibernate-mapping>  
